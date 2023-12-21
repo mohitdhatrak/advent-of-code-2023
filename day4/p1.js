@@ -13,9 +13,8 @@ for (const line of input) {
     const numList1 = numberLists[0].split(" ");
     const numList2 = numberLists[1].split(" ");
 
-    // diff num in place of '' for both arrays else it will affect logic
-    const winningNumbers = numList1.map((num) => (num !== "" ? num : -1));
-    const numbersWeHave = numList2.map((num) => (num !== "" ? num : -2));
+    const winningNumbers = numList1.filter((num) => num !== "");
+    const numbersWeHave = numList2.filter((num) => num !== "");
 
     let count = 0;
     for (const num of numbersWeHave) {
